@@ -108,8 +108,11 @@ header .menu a:hover{
 
 /*FOOTER*/
 footer{
+    padding-top: 100px;
     background-color: rgb(44, 44, 44);
     color: rgb(177, 177, 177);
+    height: 350px;
+    text-align: center;
 }
 footer p{
     font-size: 24px;
@@ -131,12 +134,9 @@ button:hover{
     font-weight: bolder;
     border-radius: 25%;
 }
-input[id="button"]{
-    margin-top: 100px;
+button:active{
 
-    color: blue;
-
-    font-family: 'Lato', sans-serif;
+    color: whitesmoke;
 
     border: none;
 }
