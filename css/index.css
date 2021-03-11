@@ -8,14 +8,18 @@ article{
     background-color: rgb(235, 235, 235);
 }
 #logo{
-    font-size: 100px;
+    font-size: 64px;
 }
-header{
-    background-image: url(https://scontent.fpoz4-1.fna.fbcdn.net/v/t1.15752-9/159263545_264070741959715_3514776704791801051_n.png?_nc_cat=103&ccb=1-3&_nc_sid=ae9488&_nc_ohc=YARDxM-vDrsAX9waprF&_nc_ht=scontent.fpoz4-1.fna&oh=234c637ddf61527352dc7eaf7c8fe660&oe=606E153E);
-    width: 1500px;
-    height: 400px;
-    color:whitesmoke;
-    margin: 0%;
+header .banner{
+    background-image: url(../img/mars.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 #title{
     text-align: center;
@@ -27,8 +31,66 @@ main{
 #products{
     text-align: center;
 }
+article{
+    width: 375px;
+    box-align: center;
+}
 footer{
     background-color: #3b3b3b;
     color: #bfbfbf;
     margin: 0%;
 }
+header .menu{
+    list-style-type: none;
+}
+header .menu a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    padding: 3px;
+}
+header .menu a:hover{
+    font-weight: bold;
+}
+@media (min-width: 500px) {
+
+    header #top {
+        display: flex;
+    }
+
+    header .menu {
+        display: flex;
+        justify-content: space-around;
+        flex: 1;
+        align-items: center;
+        flex-direction: row;
+    }
+
+}
+@media (min-width: 640px) {
+
+    .product-list {
+        display: grid;
+        grid-gap: 2px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (min-width: 800px) {
+
+    .product-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+}
+
+@media (min-width: 980px) {
+
+    .product-list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+}
+
+/*Buttons*/
