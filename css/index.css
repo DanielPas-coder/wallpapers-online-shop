@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Metrophobic&display=swap');
 
-body{
+:root{
+    scroll-behavior: smooth;
     margin: 0;
     font-family: "Metrophobic";
 }
-article{
-    background-color: rgb(235, 235, 235);
+body{
+    margin: 0%;
 }
 #logo{
     font-size: 64px;
+}
+#top{
+    background-color: darkblue;
+    color: whitesmoke;
 }
 header .banner{
     background-image: url(../img/mars.png);
@@ -32,8 +37,18 @@ main{
     text-align: center;
 }
 article{
-    width: 375px;
+    width: 300px;
+    height: 265px;
     box-align: center;
+    background-color: whitesmoke;
+}
+.product-list article {
+    border: 1px solid black;
+    padding: 5px;
+}
+.product-list article img {
+    display: block;
+    width: 100%;
 }
 footer{
     background-color: #3b3b3b;
@@ -46,7 +61,7 @@ header .menu{
 header .menu a{
     text-decoration: none;
     text-transform: uppercase;
-    color: black;
+    color: white;
     padding: 3px;
 }
 header .menu a:hover{
@@ -67,17 +82,18 @@ header .menu a:hover{
     }
 
 }
-@media (min-width: 640px) {
+
+@media (min-width: 500px) {
 
     .product-list {
         display: grid;
-        grid-gap: 2px;
+        grid-gap: 5px;
         grid-template-columns: 1fr 1fr;
     }
 
 }
 
-@media (min-width: 800px) {
+@media (min-width: 750px) {
 
     .product-list {
         grid-template-columns: 1fr 1fr 1fr;
@@ -85,7 +101,7 @@ header .menu a:hover{
     
 }
 
-@media (min-width: 980px) {
+@media (min-width: 900px) {
 
     .product-list {
         grid-template-columns: 1fr 1fr 1fr 1fr;
