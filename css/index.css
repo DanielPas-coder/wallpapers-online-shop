@@ -2,13 +2,15 @@
 
 :root{
     scroll-behavior: smooth;
-    margin: 0;
     font-family: "Metrophobic";
 }
 body{
     margin: 0%;
 }
-#logo{
+
+
+/*HEADER*/
+.logo{
     font-size: 64px;
 }
 #top{
@@ -29,47 +31,24 @@ header .banner{
 #title{
     text-align: center;
 }
-main{
-    background-color: white;
-    margin: 0%;
-}
-#products{
-    text-align: center;
-}
-article{
-    width: 300px;
-    height: 265px;
-    box-align: center;
-    background-color: whitesmoke;
-}
-.product-list article {
-    border: 1px solid black;
-    padding: 5px;
-}
-.product-list article img {
-    display: block;
-    width: 100%;
-}
-footer{
-    background-color: #3b3b3b;
-    color: #bfbfbf;
-    margin: 0%;
-}
 header .menu{
     list-style-type: none;
+    display: none;
+    flex-direction: column;
 }
 header .menu a{
     text-decoration: none;
     text-transform: uppercase;
+    font-size: 24px;
     color: white;
-    padding: 3px;
+    padding: 1px;
 }
 header .menu a:hover{
     font-weight: bold;
 }
-@media (min-width: 500px) {
+@media (min-width: 620px) {
 
-    header #top {
+    header nav {
         display: flex;
     }
 
@@ -83,7 +62,9 @@ header .menu a:hover{
 
 }
 
-@media (min-width: 500px) {
+
+/*MAIN*/
+@media (min-width: 640px) {
 
     .product-list {
         display: grid;
@@ -93,7 +74,7 @@ header .menu a:hover{
 
 }
 
-@media (min-width: 750px) {
+@media (min-width: 800px) {
 
     .product-list {
         grid-template-columns: 1fr 1fr 1fr;
@@ -101,12 +82,61 @@ header .menu a:hover{
     
 }
 
-@media (min-width: 900px) {
+@media (min-width: 980px) {
 
     .product-list {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
 }
+.product-list article {
+    border: 1px solid black;
+    padding: 5px;
+}
 
-/*Buttons*/
+.product-list article img {
+    display: block;
+    width: 100%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+/*FOOTER*/
+footer{
+    background-color: rgb(44, 44, 44);
+    color: rgb(177, 177, 177);
+}
+footer p{
+    font-size: 24px;
+}
+
+
+
+/*BUTTONS*/
+button {
+  background-color: blue;
+  color: whitesmoke;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover{
+    font-weight: bolder;
+    border-radius: 25%;
+}
+input[id="button"]{
+    margin-top: 100px;
+
+    color: blue;
+
+    font-family: 'Lato', sans-serif;
+
+    border: none;
+}
