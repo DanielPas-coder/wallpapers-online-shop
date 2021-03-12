@@ -33,7 +33,6 @@ header .banner{
 }
 header .menu{
     list-style-type: none;
-    display: none;
     flex-direction: column;
 }
 header .menu a{
