@@ -7,20 +7,36 @@
     <title>CWP</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="icon" href="img/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 
 <body>
     <header id="home">
-        <nav id="top">
-            <div class="logo">CWL</div>
-            <br>
-            <ul class="menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li><a href="#products">Buy something</a></li>
-            <li><a href="#contacts">Contacts</a></li>
-            </ul>
-        </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">/BD/</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#products">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contacts">Contacts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cart.html">Cart</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
         <div class="banner">
             <h1 id="title">"COOL WALLPAPERS":</h2>
             <p id="title">make some SPACE for your desktop!</p>
@@ -32,39 +48,13 @@
         <p id="products">Lower there is the countdown to next wallpaper for buying.</p>
         <br>
         <div class="product-list">
-            <article>
-                <img src="img/interior.png" width="300" alt="Interior">
-                <h3>Space house interior</h3>
-                <div class="button-container">
-                    <button id="button">Info</button>
-                    <button id="button">Buy</button>
+            <div class="card" style="width: 18rem;">
+                <img src="img/interior.png" class="card-img-top" alt="Interior">
+                <div class="card-body">
+                    <h5 class="card-title">Space house interior</h5>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productInfoModal">Info</a>
                 </div>
-            </article>
-            <article>   
-                <img src="img/poster.png" width="300" alt="Poster">
-                <h3>Mars Future Poster</h3>
-                <div class="button-container">
-                    <button id="button">Info</button>
-                    <button id="button">Buy</button>
-                </div>
-            </article>
-            <article>
-                <img src="img/train.png" width="300" alt="Train">
-                <h3>Train and coast</h3>
-                <div class="button-container">
-                    <button id="button">Info</button>
-                    <button id="button">Buy</button>
-                </div>
-            </article>
-            <article>
-                <img src="img/house.png" width="300" alt="House">
-                <h3>House near the river</h3>
-                <div class="button-container">
-                    <button id="button">Info</button>
-                    <button id="button">Buy</button>
-                </div>
-            </article>
-            <br>
+            </div>
         </div>
     </main>
 
@@ -80,11 +70,30 @@
             <label>
                 Your email:
                 <input type="text" name="name">
-                <button id="button" type="submit">Submit</button>
-                <button id="button" type="reset">Reset</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="reset" class="btn btn-primary">Primary</button>
             </label>
         </form>
     </footer>
+
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 
 </html>
