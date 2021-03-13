@@ -1,42 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Metrophobic&display=swap');
-
-:root{
-    scroll-behavior: smooth;
-    font-family: "Metrophobic";
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+.container{
+    font-family: 'Comfortaa';
 }
-body{
-    margin: 0;
-}
-
-
-/*HEADER*/
-.navbar-brand{
-    font-weight: bold;
-}
-.banner{
-    background-image: url(../img/mars.png);
-    background-size: cover;
-    height: 500px;
-    color: whitesmoke;
-}
-/*MAIN*/
-main{
-    background-color: rgb(230, 230, 230);
-}
-#products{
-    text-align: center;
-}
-
-
-
-/*FOOTER*/
 footer{
-    padding-top: 150px;
-    padding-bottom: 150px;
-    background-color: rgb(44, 44, 44);
-    color: rgb(177, 177, 177);
+    background-color: #1c1c1c;
+    color: #7e7e7e;
     text-align: center;
-}
-footer p{
-    font-size: 24px;
 }
