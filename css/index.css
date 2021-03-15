@@ -6,7 +6,11 @@ footer{
     background-color: #1c1c1c;
     color: #7e7e7e;
     text-align: center;
+    padding: 50px;
 }
 #wallpapers{
     text-align: center;
+}
+.product-list{
+    padding: 10px;
 }
