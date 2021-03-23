@@ -14,3 +14,18 @@ footer{
 .product-list{
     padding: 10px;
 }
+.clock{
+    color: white;
+    font-size: 120%;
+}
+.active{
+    font-weight: bold;
+}
+
+.image1{
+    block-size: 30%;
+}
+.countdown{
+    text-align: center;
+    font-size: xx-large;
+}

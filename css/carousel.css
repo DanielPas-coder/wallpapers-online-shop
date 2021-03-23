@@ -1,0 +1,8 @@
+.products-carousel .images {
+    display: flex;
+    justify-content: space-around;
+}
+
+.products-carousel .images img {
+    width: 30%;
+}
