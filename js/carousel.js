@@ -18,24 +18,6 @@ function showCurrentImage() {
     imgContainer3.src =  carouselImages[img3Idx]; 
 }
 
-function next() {
-    currentIdx++;
-    if (currentIdx > carouselImages.length - 1) currentIdx = 0;
-    showCurrentImage();
-}
-
-function prev() {
-    currentIdx--;
-    if (currentIdx < 0) currentIdx = carouselImages.length - 1;
-    showCurrentImage();
-}
-
 showCurrentImage();
 
 setInterval(next, 2500);
-
-document.querySelector('.products-carousel .next')
-  .addEventListener('click', next);
-
-document.querySelector('.products-carousel .prev')
-  .addEventListener('click', prev);
