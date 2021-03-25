@@ -30,11 +30,27 @@
   </div>
 </nav>
   <div class="products-carousel">
-            <div class="images">
-                <img class="image1" src="" alt="Carousel image">
-                <img class="image2" src="" alt="Carousel image">
-                <img class="image3" src="" alt="Carousel image">
-            </div>
+            <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/mars-carousel.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/poster-carousel.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/logo-carousel.png" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
     </div>
 </div>
 
@@ -60,14 +76,30 @@
     </main>
 
     <footer class="container">
+        <h1>I doubt you will even think to buy anything here, so try this currency converter</h1>
+        <div class="exchange-rate">
+            <label> 
+                Convert from:
+                <input type="text" class="curr-from" value="UAH">
+            </label>
+            <label>
+                Convert to:
+                <input type="text" class="curr-to" value="USD">
+            </label>
+            <label>
+                Rate:
+                <input type="text" class="rate" readonly>
+            </label>
+            <button class="show-rate btn btn-primary">Show rate</button>
+        </div>
         <div class="contact">
             <h1 id="contacts">Contacts</h1>
-            <p>So, if you want to give us your idea, you can contact with us. You can also register for being informed about
+            <p>If you want to give us your idea, you can contact with us. You can also register for being informed about
             new products in store.</p>
             <p id="info">Contact: danielpas317@gmail.com</p>
         </div>
         <br>
-        <form action="https://formspree.io/f/mjvpqzbg" method="POST">
+        <form class="login-form">
             <label>
                 Your email:
                 <input type="text" name="name">
@@ -79,6 +111,7 @@
 
     <script src="js/index.js"></script>
     <script src="js/products.js"></script>
+    <script src="js/currency-converter.json"></script>
     <script src="js/carousel.js"></script>
     <script src="js/countdown.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>

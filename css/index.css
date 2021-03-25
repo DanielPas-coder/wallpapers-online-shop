@@ -6,7 +6,8 @@ footer{
     background-color: #1c1c1c;
     color: #7e7e7e;
     text-align: center;
-    padding: 50px;
+    padding-top: 150px;
+    padding-bottom: 150px;
 }
 #wallpapers{
     text-align: center;
@@ -20,10 +21,6 @@ footer{
 }
 .active{
     font-weight: bold;
-}
-
-.image1{
-    block-size: 30%;
 }
 .countdown{
     text-align: center;
