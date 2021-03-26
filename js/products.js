@@ -10,7 +10,7 @@ function renderProducts(products, sortOrder = 'ascending') {
                 <img src="img/${product.image}" alt="${product.title}">
                 <div class="button-container">
                     <h3>${product.title}</h3>
-                    <button class="button card-button btn btn-primary">Byu (${product.price})</button>
+                    <button class="button card-button btn btn-outline-primary">Byu (${product.price})</button>
                 </div>
             </div>`
     }
