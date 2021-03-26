@@ -1,4 +1,4 @@
-const submitButton = document.querySelector('.login-form  input[type=submit]');
+const submitButton = document.querySelector('.login-form  button[type=submit]');
 submitButton.addEventListener('click', login);
 
 async function login(ev) {
