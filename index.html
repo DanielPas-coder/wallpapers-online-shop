@@ -25,7 +25,11 @@ integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolfl
         <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="#products">Features</a></li>
         <li class="nav-item"><a class="nav-link" href="#contacts">Contacts</a></li>
-        <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+        <li class="nav-item">
+            <a class="nav-link openCartLink" href="#modal-cart" data-bs-toggle="modal">
+                Cart<span id="cart-badge" class="badge bg-dark"></span>
+            </a>
+        </li>
       </ul>
     </div>
     <div class="clock"></div>
@@ -63,12 +67,11 @@ integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolfl
         <div id="wallpapers">
             <br>
             <h2>Wallpapers</h2>
-            <p>Lower there is the countdown to next wallpaper for buying.</p>
             <br>
         </div>
-          <button class="sort-asc btn btn-outline-secondary">Sort by ascending</button>
-  <button class="sort-desc btn btn-outline-secondary">Sort by descending</button>
-        <div class="product-list row"></div>
+          <button class="sort-asc btn btn-outline-secondary">Price Low-High</button>
+  <button class="sort-desc btn btn-outline-secondary">Price High-Low</button>
+        <div class="row product-container"></div>
         <br>
         <div class="countdown">
             <h1>This site</h1>
@@ -78,49 +81,58 @@ integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolfl
     </main>
 
     <footer class="container">
-        <h1>I doubt you will even think to buy anything here, so try this currency converter</h1>
-        <div class="exchange-rate">
-            <label> 
-                Convert from:
-                <input type="text" class="curr-from" value="USD">
-            </label>
-            <label>
-                Convert to:
-                <input type="text" class="curr-to" value="UAH">
-            </label>
-            <label>
-                Rate:
-                <input type="text" class="rate" readonly>
-            </label>
-            <button class="show-rate btn btn-outline-primary">Show rate</button>
-        </div>
         <div class="contact">
             <h1 id="contacts">Contacts</h1>
-            <p>If you want to give us your idea, you can contact with us. You can also register for being informed about
-            new products in store.</p>
-            <p id="info">Contact: danielpas317@gmail.com</p>
+            <p>If you want to give us your idea, you can contact with the author.</p>
+            <p id="info">Contact me <a href="https://www.facebook.com/profile.php?id=100015202036127">here</a>.</p>
         </div>
-        <br>
-        <form class="login-form">
-            <label>
-                User name: <input name="name" type="text" placeholder="Your name" required>
-            </label>
-            <br>
-            <label>
-                Password: <input name="password" type="password" required>
-            </label>
-            <br>
-            <button type="submit" class="btn btn-outline-success">Submit</button>
-            <button type="reset" class="btn-outline-danger">Reset</button>
-        </form>
     </footer>
 
+
+        <!-- Modal Cart -->
+    <div class="modal fade" id="modal-cart" tabindex="-1" role="dialog" aria-labelledby="cartLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cartLabel">Cart</h5>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="cart-product-list-container"></div>
+            <hr>
+            <div class="container">
+              <form class="form-contacts">
+                <div class="form-group row">
+                  <label for="client-name" class="col-4 col-form-label">Your name:</label>
+                  <input class="form-control col-8" type="text" id="client-name" required>
+                </div>
+                <div class="form-group row">
+                  <label for="client-email" class="col-4 col-form-label">Your email:</label>
+                  <input class="form-control col-8" type="email" id="client-email" required>
+                </div>
+              </form>
+              <br>
+              <iframe src="https://www.youtube.com/embed/CAdr7uNpPBw?controls=0" class="video" title="YouTube video player" 
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary close-btn" data-bs-dismiss="modal">Close</button>
+            <button class="btn btn-primary order">Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert-container"></div>
+
     <script src="js/index.js"></script>
-    <script src="js/products.js"></script>
-    <script src="js/currency-converter.json"></script>
-    <script src="js/carousel.js"></script>
+    <script src="js/product-list.js"></script>
+    <script src="js/product-service.js"></script>
     <script src="js/countdown.js"></script>
-    <script src="js/login-form.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>

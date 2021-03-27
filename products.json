@@ -1,26 +1,26 @@
 [
     {
         "id": "1",
-        "title": "Space house interior",
+        "title": "House interior",
         "image": "interior.png",
-        "price": 59.99
+        "price": 49.99
     },
     {
         "id": "2",
-        "title": "Mars Poster",
+        "title": "Poster",
         "image": "poster.png",
-        "price": 99.99
+        "price": 19.99
     },
     {
         "id": "3",
-        "title": "Train and coast",
-        "image": "train.png",
-        "price": 39.99
+        "title": "Mars map",
+        "image": "mars.png",
+        "price": 24.99
     },
     {
         "id": "4",
-        "title": "House near the lake",
-        "image": "house.png",
-        "price": 19.99
+        "title": "Man in hood",
+        "image": "logo.png",
+        "price": 99.99
     }
 ]
