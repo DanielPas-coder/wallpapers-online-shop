@@ -1,7 +1,7 @@
 class ProductList {
   constructor(cart) {
     this.cart = cart;
-    this.container = document.querySelector('.products-container');
+    this.container = document.querySelector('.product-container');
     this.productService = new ProductsService();
     this.sortDirection = 'ascending';
     this.productService
@@ -17,14 +17,23 @@ class ProductList {
                          ? a.price - b.price
                          : b.price - a.price)
       .forEach(product => {
-      productListDomString += 
-            `<div class="card" style="width: 18rem;">
-                <img src="img/${product.image}" alt="${product.title}">
-                <div class="button-container">
-                    <h3>${product.title}</h3>
-                    <button class="button card-button btn btn-outline-primary">Byu (${product.price})</button>
-                </div>
-            </div>`;
+      productListDomString += `<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+                  <div class="card product">
+                    <img class="card-img-top" src="img/products/${product.image}" 
+                        alt="${product.title}">
+                    <div class="card-body d-flex flex-column">
+                      <h4 class="card-title">${product.title}</h4>
+                      <div class="d-flex justify-content-around">
+                        <button class="btn btn-info" data-bs-toggle="modal"
+                          data-bs-target="#productInfoModal" data-id="${product.id}">Info
+                        </button>
+                        <button class="btn btn-primary buy" data-id="${product.id}">
+                          $${product.price} - Buy
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>`;
     });
     this.container.innerHTML = productListDomString;
   }
