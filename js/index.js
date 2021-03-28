@@ -5,3 +5,6 @@ function updateClock() {
     const clockContainer = document.querySelector('.clock');
     clockContainer.innerText = new Date().toLocaleTimeString();
 }
+
+
+new ProductList(new Cart());

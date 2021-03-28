@@ -17,7 +17,8 @@ class ProductList {
                          ? a.price - b.price
                          : b.price - a.price)
       .forEach(product => {
-      productListDomString += `<div class="card" style="width: 18rem;">
+      productListDomString += 
+            `<div class="card" style="width: 18rem;">
                 <img src="img/${product.image}" alt="${product.title}">
                 <div class="button-container">
                     <h3>${product.title}</h3>
@@ -62,7 +63,7 @@ class ProductList {
     const product = await this.productService.getProductById(id);
     const modal = document.querySelector('#productInfoModal');
     const productImg = modal.querySelector('.modal-body .card-img-top');
-    productImg.setAttribute('src', 'img/products/' + product.image);
+    productImg.setAttribute('src', 'img/' + product.image);
     productImg.setAttribute('alt', product.title);
     modal.querySelector('.modal-body .card-title').innerText = product.title;
     modal.querySelector('.modal-body .card-text').innerText =
