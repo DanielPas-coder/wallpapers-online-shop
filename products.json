@@ -19,6 +19,12 @@
     },
     {
         "id": "4",
+        "title": "House near the lake",
+        "image": "house.png",
+        "price": 14.99
+    },
+    {
+        "id": "5",
         "title": "Man in hood",
         "image": "logo.png",
         "price": 99.99

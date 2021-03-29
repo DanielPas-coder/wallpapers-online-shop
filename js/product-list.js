@@ -17,7 +17,8 @@ class ProductList {
                          ? a.price - b.price
                          : b.price - a.price)
       .forEach(product => {
-      productListDomString += `<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+      productListDomString += `
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
                   <div class="card product">
                     <img class="card-img-top" src="img/products/${product.image}" 
                         alt="${product.title}">
@@ -40,13 +41,6 @@ class ProductList {
   
   async addEventListeners() {
     document
-      .querySelectorAll('.product .btn-info')
-      .forEach(button =>
-        button.addEventListener('click', event =>
-          this.handleProductInfoClick(event)
-        )
-      );
-    document
       .querySelectorAll(
         '.card.product button.buy, #productInfoModal button.buy'
       )
@@ -66,21 +60,21 @@ class ProductList {
         this.addEventListeners();
     });
   }
-  async handleProductInfoClick(event) {
-    const button = event.target; // Button that triggered the modal
-    const id = button.dataset.id; // Extract info from data-* attributes
-    const product = await this.productService.getProductById(id);
-    const modal = document.querySelector('#productInfoModal');
-    const productImg = modal.querySelector('.modal-body .card-img-top');
-    productImg.setAttribute('src', 'img/' + product.image);
-    productImg.setAttribute('alt', product.title);
-    modal.querySelector('.modal-body .card-title').innerText = product.title;
-    modal.querySelector('.modal-body .card-text').innerText =
-      product.description;
-    const btnBuy = modal.querySelector('button.buy');
-    btnBuy.innerText = `${product.price} - Buy`;
-    btnBuy.dataset.id = id;
-  }
+//   async handleProductInfoClick(event) {
+//     const button = event.target; // Button that triggered the modal
+//     const id = button.dataset.id; // Extract info from data-* attributes
+//     const product = await this.productService.getProductById(id);
+//     const modal = document.querySelector('#productInfoModal');
+//     const productImg = modal.querySelector('.modal-body .card-img-top');
+//     productImg.setAttribute('src', 'img/' + product.image);
+//     productImg.setAttribute('alt', product.title);
+//     modal.querySelector('.modal-body .card-title').innerText = product.title;
+//     modal.querySelector('.modal-body .card-text').innerText =
+//       product.description;
+//     const btnBuy = modal.querySelector('button.buy');
+//     btnBuy.innerText = `${product.price} - Buy`;
+//     btnBuy.dataset.id = id;
+//   }
   handleProductBuyClick(event) {
     const button = event.target;
     const id = button.dataset.id;
