@@ -26,7 +26,7 @@ class ProductList {
                       <h4 class="card-title">${product.title}</h4>
                       <div class="d-flex justify-content-around">
                         <button class="btn btn-primary buy" data-id="${product.id}">
-                          $${product.price} - Buy
+                        ${product.price}$ - Buy
                         </button>
                       </div>
                     </div>

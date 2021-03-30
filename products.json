@@ -28,5 +28,17 @@
         "title": "Man in hood",
         "image": "logo.png",
         "price": 99.99
+    },
+    {
+        "id": "6",
+        "title": "Factory",
+        "image": "factory.png",
+        "price": 79.99
+    },
+    {
+        "id": "7",
+        "title": "Train on the bridge",
+        "image": "train.png",
+        "price": 29.99
     }
 ]
