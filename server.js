@@ -12,7 +12,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(express.static(path.resolve(__dirname, './')));
 
-app.post('/order', (req, res) => {
+app.post('order', (req, res) => {
   const fs = require('fs');
   fs.appendFile('./orders.txt', JSON.stringify(req.body) + '\n', function(err) {
     if (err) {

@@ -123,7 +123,7 @@ class Cart {
           if (response.status === 200) {
             return response.text();
           } else {
-            return response.text();
+            throw new Error('Cannot send form');
           }
         })
         .then(responseText => {
