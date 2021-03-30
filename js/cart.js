@@ -102,13 +102,13 @@ class Cart {
   }
   async order(ev) {
     if ((await this.cartLengthAndCost()).count === 0) {
-      window.showAlert('Please choose products to order', false);
+      window.showAlert('Please choose products to order.', false);
       return;
     }    
     const form = this.cartContainer.querySelector('.form-contacts');
     if (form.checkValidity()) {
       ev.preventDefault();
-      fetch('order', {
+      fetch('/order', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
